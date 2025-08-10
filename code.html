@@ -188,7 +188,71 @@
   <p>Price: ₹340</p>
   <button onclick="addToCart('Educated', 340)">Add to Cart</button>
 </div>
+<div class="book">
+  <h3>Good Vibes, Good Life</h3>
+  <p>Price: ₹260</p>
+  <button onclick="addToCart('Good Vibes, Good Life', 260)">Add to Cart</button>
+</div>
 
+<script>
+  function checkout() {
+    if (cart.length === 0) {
+      alert("Your cart is empty. Please add some books!");
+      return;
+    }
+
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+    alert("✅ Order placed successfully!\nTotal amount: ₹" + total);
+
+    cart = [];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+  }
+</script>
+<!-- Cart Display Section -->
+<div id="cart-section">
+  <h2>🛒 Your Cart</h2>
+  <ul id="cart-list"></ul>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  function addToCart(title, price) {
+    cart.push({ title, price });
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+  }
+
+  function displayCart() {
+    const cartList = document.getElementById("cart-list");
+    cartList.innerHTML = "";
+    cart.forEach((item, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${item.title} - ₹${item.price} `;
+const removeBtn = document.createElement("button");
+      removeBtn.textContent = "Remove";
+      removeBtn.onclick = () => removeFromCart(index);
+      li.appendChild(removeBtn);
+      cartList.appendChild(li);
+    });
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+  }
+
+  // Load cart when page is opened
+  displayCart();
+</script>
+
+
+
+</body>
+</html>
 
 
 
