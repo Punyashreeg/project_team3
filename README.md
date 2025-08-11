@@ -1,79 +1,62 @@
+Online Bookstore - Cart
 
-📚 Online Bookstore - Cart
+This project is a simple online bookstore shopping cart implemented using HTML(CSS).
+It allows users to browse books, add them to a cart, view cart contents, remove items, and checkout.
+Cart data is stored in localStorage so it remains available even after page reload.
 
-This is a simple HTML, CSS, and JavaScript project for an Online Bookstore that lets users browse books, add them to a shopping cart, remove books, and checkout.
-The cart data is stored in the browser’s localStorage, so it persists even after refreshing the page.
+Features
 
-🚀 Features
+Display books with image, title, and price.
 
-Book Catalog: Displays a list of 30 books with titles, prices, and images.
+Add to Cart button for each book.
 
-Add to Cart: Click the Add to Cart button to add books to your cart.
+View and remove items from the cart.
 
-Remove from Cart: Easily remove items from the cart.
+Checkout with total price calculation.
 
-Cart Persistence: Cart items are saved in localStorage so they are not lost on page reload.
-
-Checkout: Shows total amount and clears the cart after purchase.
-
-Responsive Grid Layout (with improved CSS).
+Persistent cart storage using localStorage.
 
 
-🛠️ Technologies Used
+Technologies Used
 
-HTML5 – Structure of the website.
+HTML5 – Structure of the webpage.
 
-CSS3 – Styling for layout, buttons, and book cards.
+CSS3 – Styling and layout.
 
-JavaScript – Cart functionality and localStorage integration.
-
-
-📂 Project Structure
-
-📦 online-bookstore
- ┣ 📜 index.html       # Main HTML file
- ┣ 📜 README.md        # Documentation
- ┣ 📂 images           # Book images (book1.jpeg, book2.jpeg, ...)
- ┗ 📜 style.css        # Optional external stylesheet (if separated)
-
-📌 How It Works
-
-1. Browse books from the catalog.
+JavaScript (Vanilla) – Cart functionality and storage.
 
 
-2. Add to Cart by clicking the button under each book.
+File Structure
+
+index.html   → Main HTML page with embedded CSS and JavaScript
+
+How It Works
+
+1. Add to Cart – Click the "Add to Cart" button to store book details in localStorage.
 
 
-3. View Cart in the cart section at the bottom.
+2. View Cart – Items are displayed in the cart section.
 
 
-4. Remove items from the cart if needed.
+3. Remove Items – Remove a specific book from the cart.
 
 
-5. Checkout to see the total amount and reset the cart.
+4. Checkout – Alerts the total price and clears the cart.
 
 
 
-💻 Setup Instructions
+Usage
 
-1. Download or clone this repository:
-
-git clone https://github.com/yourusername/online-bookstore.git
+1. Open code.html in a browser.
 
 
-2. Place all book images (book1.jpeg, book2.jpeg, etc.) in the same folder or update the image paths in HTML.
+2. Click Add to Cart for the books you want.
 
 
-3. Open index.html in any web browser.
+3. Scroll to the Cart Section to see selected books.
+
+
+4. Click Checkout to finalize and clear the cart.
 
 
 
-🎯 Future Enhancements
-
-Add user login & signup.
-
-Add search bar to find books.
-
-Connect to a backend database for real orders.
-
-Implement quantity selection.
